@@ -23,6 +23,19 @@ def shareReference2():
 	#避免这种情况发生，使用拷贝（Test4）。
 	print (x2)
 
+def shareReference3():
+	l = [1,2]
+	m = l
+	#+是合并，生成新对象
+	l = l+[3,4]
+	print (l, m)
+	q = [1,2]
+	w = q
+	#+=对列表原处修改
+	q += [3,4]
+	print (q,w)
+
 if __name__ == '__main__':
 	shareReference1()
 	shareReference2()
+	shareReference3()
