@@ -7,7 +7,7 @@ def readFile():
 	text = fr.readlines()
 	print (text)
 	for line in text:
-		#rstrip()去掉回车
+		#rstrip()去掉末尾的回车
 		print (line.rstrip())
 
 if __name__ == '__main__':

@@ -1,7 +1,7 @@
 class sampleCaller:
 	def caller(self):
-		import calledFile.Called
-		test = calledFile.Called.sampleCalled()
+		import calledFile.called
+		test = calledFile.called.sampleCalled()
 		test.called()
 
 if __name__ == '__main__':
