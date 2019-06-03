@@ -5,6 +5,7 @@ class Manager(Person):
 		Person.__init__(self, name, 'mgr', pay)
 
 	def giveRaise(self, percent, bonus=0.1):
+		#重写
 		Person.giveRaise(self, percent + bonus)
 
 if __name__ == '__main__':
