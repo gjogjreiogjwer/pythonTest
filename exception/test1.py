@@ -19,7 +19,7 @@ def catcher2():
 		raise IndexError
 	except IndexError:
 		print ('got excpetion')
-	# 有条件触发异常
+	# 有条件触发异常，用于收集约束条件
 	# assert False, 'nobody exceptions the spanish'
 
 def catcher3():
@@ -27,6 +27,9 @@ def catcher3():
 		fetcher(x, 4)
 	except IndexError:
 		print ('got exception')
+	# 没有发生异常时执行
+	else:
+		print ('no exception')
 	#无论是否发生异常，都会执行finally,一般用于关闭文件
 	finally:
 		print ('after fetch')
