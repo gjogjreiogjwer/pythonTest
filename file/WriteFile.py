@@ -4,10 +4,16 @@
 
 def writeFile():
 	#‘w’才能创建文件
-	fr = open('data.txt', 'w')
-	fr.write('hello\n')
-	fr.write('world\n')
-	fr.close()
+
+	# fr = open('data.txt', 'w')
+	# fr.write('hello\n')
+	# fr.write('world\n')
+	# fr.close()
+
+	# with关键字可以省略close()，并在出错时自动关闭
+	with open('data.txt', 'w') as fr:
+		fr.write('hellooooo\n')
+		fr.write('world\n')
 
 if __name__ == '__main__':
 	writeFile()
