@@ -193,7 +193,7 @@ df.dropna(how='any')
 df.dropna(how='any', axis=1)
 
 # 将NaN的值改为5
-df.fillna(value=5)
+df.fillna(5)
 
 
 # 排序
@@ -207,6 +207,15 @@ print (df.sort_index(ascending=False).head())
 
 print ('按Open列升序:*********************')
 print (df.sort_values(by='Open'))
+
+
+# 特征因子化，输出数值型特征
+print ('*****************************************************************************************')
+df3.iloc[0,3] = 'yyy'
+print (df3)
+dummies_D = pd.get_dummies(df3['D'], prefix='D')
+print (dummies_D)
+
 
 # 合并
 print ('*****************************************************************************************')
@@ -245,6 +254,21 @@ print ('读取stock.csv并将第一行作为columns,将Code中的000001作为str
 df2 = pd.read_csv('stock.csv', index_col=0, dtype={'Code':str})
 print (df2)
 
+# 查找包含str
+print ('*****************************************************************************************')
+print (df3.D.str.contains('y'))
+print (df3.D.str.contains('y|t'))
+
+# 查找不包含str
+print (df3.D.str.contains('y')==False)
+
+# 添加一列
+df3['Q'] = 2
+print (df3)
+
+# 索引
+print (df3.loc[2,'Q'])
+print (df3.iloc[0,3])
 
 
 
