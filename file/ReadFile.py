@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-# 读文件。
+# 读文件。   
 
 def readFile():
 	# open('data.txt','r'), 'r'是默认值
