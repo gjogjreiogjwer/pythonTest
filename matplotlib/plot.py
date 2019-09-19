@@ -250,7 +250,7 @@ y = [2,4,6,8,10]
 
 
 
-data = pd.read_csv('train.csv')
+# data = pd.read_csv('train.csv')
 # survivedInfo = data.Survived.value_counts()
 # print (survivedInfo)
 # survivedInfo.plot(kind='bar')
